@@ -28,6 +28,11 @@
     select * from book left join category on book.cid = category.id
     where book.cid = #{cid}
   </select>
+  <select id="findBookByAuthorOrBookName" resultType="com.example.demo765.entity.Book">
+    select * from book
+    where title like concat("%",#{keywords},"%")
+    or author like concat("%",#{keywords},"%")
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from book
     where id = #{id,jdbcType=INTEGER}

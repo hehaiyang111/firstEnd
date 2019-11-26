@@ -9,17 +9,28 @@ public class Book {
 
     private String date;
 
+    public Integer getCid() {
+        return cid;
+    }
+
+    public void setCid(Integer cid) {
+        this.cid = cid;
+    }
+
     private String press;
 
     private String abs;
 
-    public Book(Integer id, String title, String author, String date, String press, String abs) {
+    private Integer cid;
+
+    public Book(Integer id, String title, String author, String date, String press, String abs,Integer cid) {
         this.id = id;
         this.title = title;
         this.author = author;
         this.date = date;
         this.press = press;
         this.abs = abs;
+        this.cid = cid;
     }
 
     public Book() {
