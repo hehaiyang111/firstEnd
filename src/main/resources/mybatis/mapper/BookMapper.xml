@@ -21,11 +21,11 @@
     where id = #{id,jdbcType=INTEGER}
   </select>
     <select id="findAll" resultType="com.example.demo765.entity.Book">
-      select * from book left join category on book.cid = category.id
+      select book.*,category.name typeName from book left join category on book.cid = category.id
       order by book.id desc
     </select>
   <select id="findBookByCid" resultType="com.example.demo765.entity.Book">
-    select * from book left join category on book.cid = category.id
+    select book.*,category.name typeName from book left join category on book.cid = category.id
     where book.cid = #{cid}
   </select>
   <select id="findBookByAuthorOrBookName" resultType="com.example.demo765.entity.Book">
