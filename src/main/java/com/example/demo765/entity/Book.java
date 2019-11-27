@@ -9,6 +9,16 @@ public class Book {
 
     private String date;
 
+    public String getCover() {
+        return cover;
+    }
+
+    public void setCover(String cover) {
+        this.cover = cover;
+    }
+
+    private String cover;
+
     public String getTypeName() {
         return typeName;
     }
@@ -32,7 +42,7 @@ public class Book {
 
     private Integer cid;
 
-    public Book(Integer id, String title, String author, String date, String press, String abs,Integer cid) {
+    public Book(Integer id, String title, String author, String date, String press, String abs,Integer cid,String cover) {
         this.id = id;
         this.title = title;
         this.author = author;
@@ -40,6 +50,7 @@ public class Book {
         this.press = press;
         this.abs = abs;
         this.cid = cid;
+        this.cover = cover;
     }
 
     public Book() {
