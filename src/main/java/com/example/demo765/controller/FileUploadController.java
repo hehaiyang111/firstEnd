@@ -24,7 +24,7 @@ public class FileUploadController {
         Date date = new Date();
         String format = sdf.format(date);
         //加上日期用于分类
-        File file = new File(realPath+format);
+        File file = new File(realPath);
         //目录如果不存在就建立一个
         if(!file.isDirectory()){
             file.mkdirs();
@@ -47,7 +47,7 @@ public class FileUploadController {
             //req.serverPort:当前的端口号
 //            String filePath = req.getScheme() + "://" + req.getServerName() + ":" + req.getServerPort() +
 //                    "/uploadFile/" +format+ oldName;
-            String filePath = "http://localhost:8081/upload";
+            String filePath = "http://localhost:8081/upload/" + newName;
             return filePath;
         } catch (Exception e){
             e.printStackTrace();
