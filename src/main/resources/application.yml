@@ -50,3 +50,15 @@ server:
 mybatis:
   mapper-locations: classpath*:mybatis/mapper/*.xml
   type-aliases-package: com.example.demo765.entity
+
+logging:
+  level:
+    org:
+      springframework: WARN
+      spring:
+        springboot:
+          dao: debug
+    com:
+      example:
+        demo765:
+          mapper: DEBUG

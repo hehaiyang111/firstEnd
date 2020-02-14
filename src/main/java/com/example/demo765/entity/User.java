@@ -7,6 +7,8 @@ public class User {
 
     private String password;
 
+    private String salt;
+
     public User(Integer id, String username, String password) {
         this.id = id;
         this.username = username;
@@ -39,5 +41,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password == null ? null : password.trim();
+    }
+
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
     }
 }

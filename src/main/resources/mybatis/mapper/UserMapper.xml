@@ -28,9 +28,9 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.example.demo765.entity.User">
-    insert into tb_user (id, username, password
+    insert into tb_user (id, username, password,salt
       )
-    values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}
+    values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},#{salt}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.example.demo765.entity.User">
